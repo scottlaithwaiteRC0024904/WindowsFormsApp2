@@ -30,10 +30,18 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int width = int.Parse(textBox1.Text);
-            int height = int.Parse(textBox2.Text);
-            int area = width * height;
-            textBox3.Text = area.ToString();
+
+            try
+            {
+                double width = double.Parse(textBox1.Text);
+                double height = double.Parse(textBox2.Text);
+                double area = width * height;
+                textBox3.Text = area.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("error your input is invalid");
+            }
         }
     }
 }
