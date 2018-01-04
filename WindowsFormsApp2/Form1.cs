@@ -16,5 +16,24 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+            
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int width = int.Parse(textBox1.Text);
+            int height = int.Parse(textBox2.Text);
+            int area = width * height;
+            textBox3.Text = area.ToString();
+        }
     }
 }
